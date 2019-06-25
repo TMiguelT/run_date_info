@@ -5,12 +5,13 @@ import json
 import random
 import datetime
 import sys
+import iso8601
 
 
 @click.command()
 @click.argument('multiqc_dir', type=Path)
 @click.option('--date-range', nargs=2, help='If set, this is a range of ISO dates that will be randomly selected from',
-              type=datetime.date.fromisoformat)
+              type=iso8601.parse_date)
 def generate(multiqc_dir: Path, date_range=None):
     date_start, date_end = date_range
 

@@ -1,6 +1,7 @@
 from setuptools import setup, find_packages
 
 setup(
+    version='0.0.1',
     name='run_date_info_gen',
     packages=find_packages(),
     entry_points={
@@ -9,6 +10,7 @@ setup(
         ]
     },
     install_requires=[
-        'click'
+        'click',
+        'iso8601'
     ]
 )
